@@ -1,0 +1,113 @@
+{% extends "basic.html" %}
+
+{% load static%}
+{% block main %}
+<style>
+    .Slides{
+  height: 300px;
+  width: 100%;
+  display: none;
+  align-content: center;
+}
+.about-container{
+    width: 100%;
+    height: 300px;
+    background-color: antiquewhite;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding-left: 350px;
+}
+</style>
+<h1>This is aboutus page</h1>
+<div class="about-container">
+<div>
+    <img class="Slides" src="{%static 'img/a.jpg' %}" style="width:50%">
+    <img class="Slides" src="{%static 'img/h.jpg' %}" style="width:50%">
+    <img class="Slides" src="{%static 'img/d.jpg' %}" style="width:50%">
+    <img class="Slides" src="{%static 'img/n.jpg' %}" style="width:50%">
+    <img class="Slides" src="{%static 'img/e.jpg' %}" style="width:50%">
+</div>
+</div>
+<br>
+
+    <div class="bodytext">
+       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
+         amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+         sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto obcaecati laborum 
+    itaque fugiat vitae eos sed fuga corrupti aspernatur officia? Ipsam repellat quia quae totam id. Minima adipisci aliquam veniam.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto necessitatibus a dolores voluptas itaque mollitia voluptatibus, 
+    nesciunt consectetur quasi, omnis reprehenderit at impedit vel laudantium perspiciatis quos tempora ipsum.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. In expedita officiis id qui corrupti est eligendi, saepe dolorum quam commodi illum rerum optio, natus facere. 
+    Perferendis ex cum suscipit aperiam.
+</p>
+        <div>
+            <h2>Focus</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+            <h2>Facilities</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+            <h2>Mission</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+            <h2>Goals</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("Slides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+{% endblock %}

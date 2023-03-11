@@ -1,0 +1,97 @@
+{% extends "basic.html" %}
+
+{% load static%}
+{% block main %}
+<style>
+    .card-tuto{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+      border-radius: 10%;
+    
+    }
+    .card-tuto:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,5);
+    }
+    
+    
+    
+    .card-tuto button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 10%;
+    }
+    
+    .card-tuto button:hover {
+      opacity: 0.7;
+    }
+    .card-tuto button a{
+      color: white;
+      border: none;
+    }
+    .imgs{
+      height: 200px;
+      border-radius: 10%;
+    }
+    .column {
+      float: left;
+      width: 25%;
+      padding: 0 10px;
+      padding-left: 85px;
+    }
+    
+    /* Remove extra left and right margins, due to padding */
+    .row {margin: 0 -5px;}
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+</style>
+
+<h2 style="text-align:center">Our Class</h2>
+<div class="row">
+  <div class="column">
+  <div class="card-tuto">
+      <img src="{%static 'img/i.jpg' %}" alt="vegetables" style="width:100%" class="imgs">
+      <h2>Vegetables</h2>
+      
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <p><button><a href="#">click to study</a></button></p>
+  </div>
+  </div>
+  <div class="column">
+
+  <div class="card-tuto">
+      <img src="{%static 'img/c.jpg' %}" alt="Fruits" style="width:100%" class="imgs">
+      <h2>Fruits</h2>
+      
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <p><button><a href="#">click to study</a></button></p>
+  </div>
+</div>
+<div class="column">
+
+  <div class="card-tuto">
+      <img src="{%static 'img/m.jpg' %}" alt="animals" style="width:100%"class="imgs">
+      <h2>Animals</h2>
+      
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <p><button><a href="#">click to study</a></button></p>
+  </div>
+  
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends "basic.html" %}
+
+
+{% block main %}
+<style type="text/css">
+    .con-body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+   
+    .container{
+        background-color: lightgray;
+        width: 850px;
+        height: 600px;
+        border-radius: 10%;
+        padding-left: 50px;
+       /* box-shadow: 10px 10px 5px lightblue inset;*/
+
+    }
+/*     .label-text{
+        font-size: 18px;
+        font-family: initial;
+
+    }*/
+    .inform{
+        border: none;
+        background-color: lightgray;
+        border-bottom: 2px solid black;
+        width: 150px;
+        font-size: 16px;
+    }
+    .transection{
+        padding-left: 470px;
+    }
+    .dem-con{
+            font-size: 18px;
+            font-family: initial;
+    }
+    .label-mid{
+        padding-left: 20px;
+    }
+    .label-lst{
+        padding-left: 20px;
+    }
+    .label-con{
+        padding-left: 200px;
+    }
+    .label-prd{
+        padding-left: 200px;
+    }
+    .label-pmt{
+        padding-left: 150px;
+    }
+    .pmt-detls{
+        font-size: 14px;
+        padding-left: 400px;
+
+    }
+    form input[type="submit"]{
+      height: 50px;
+      width: 100px;
+      border-radius: 40%;
+      margin-top: 30px;
+      color: black;
+      padding: 0;
+      border: none;
+      background: greenyellow;
+      cursor: pointer;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+
+    }
+    form input[type="submit"]:hover{
+      background: ghostwhite;
+    }
+
+   .lst{
+    padding-left: 30px;
+   }
+   .login-items{
+    text-align: center;
+
+   }
+   .login-btn{
+    text-align: center;
+   }
+   .regis-tools{
+    color: dimgray;
+    font-size: xx-large;
+    font-family: cursive;
+    text-align: center;
+   }
+
+</style>
+<h3 class="regis-tools">Here you can Register yours Product</h3>
+<div class="con-body">
+    <div class="container">
+        <h1 class="regis-tools">Register Product</h1>
+        <form  class="dem-con">
+            
+        
+                <label class="label-text">First Name :  </label><input type="name" name="fname" class="inform">
+                <label class="label-mid">Middle Name :  </label><input type="name" name="mname" class="inform">
+                <label class="label-lst">Last Name :  </label><input type="name" name="lname" class="inform"><br><br><br><br>
+                <label class="label-add">Address :  </label><input type="text" name="addr" class="inform">
+                <label class="label-con">Contact :  </label><input type="text" name="cnt" class="inform"><br><br><br><br>
+                <label class="label-cate">Category :  </label><select class="inform">
+                    <option>-- Select --</option>
+                    <option>Fruits</option>
+                    <option>Vegetable</option>
+                    <option>Animals</option>
+
+                </select>
+                <label class="label-prd">Product Name :  </label><input type="name" name="pname" class="inform"><br><br><br><br>
+                <label>Quantity :  </label><input type="number" name="qty" class="inform">
+
+                <label class="label-pmt">Payment Mode :  </label><input type="radio" name="payment mode">Cheque
+                <input type="radio" name="payment mode">Cash
+                <input type="radio" name="payment mode">Online<br><h>
+                <div class="pmt-detls"><p>Payment Details :  </p></div>
+                <div class="transection">
+                <label class="label-cheq">Cheque No.:  </label><input type="text" name="cqn" class="inform"><br><br>
+                <label class="label-trns">Transection Id :  </label><input type="text" name="tid" class="inform"><br><br></div>
+                <div class="login-btn"><input type="submit" name="btn" value="Register" ></div>
+            
+        </form>
+    </div>
+</div>
+{% endblock %}

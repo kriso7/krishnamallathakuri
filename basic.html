@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="{%static 'css/style.css' %}"/>
+  <link rel="stylesheet" href="{%static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+</head>
+<body>
+<!-- header-image -->
+<header class="header">
+  <img
+    src="{% static 'img/logo.jpg' %}"
+    alt="MetroFarmHouse"
+    class="logo"
+  />
+<!-- nav-bar -->
+<div class="topnav" id="myTopnav">
+
+  <a href="{%url 'basic' %}" class="active">Home</a>
+  <a href="{%url 'about'%}">About</a>
+  <!-- <a href="{%url 'login' %}">Login</a> -->
+  <div class="dropdown">
+    <button class="dropbtn">Tutorial
+    
+    </button>
+    <div class="dropdown-content">
+      <a href="{%url 'farming' %}">Farming</a>
+      <a href="{%url 'veterinary' %}">Veterinary</a>
+      
+    </div>
+  </div> 
+  <!-- <div class="dropdown">
+    <button class="dropbtn">Register
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="vegetables.html">Vegetables</a>
+      <a href="fruits.html">Fruits</a>
+      <a href="animals1.html">Animals</a>
+      
+    </div>
+  </div>  -->
+  <a href="{%url 'register' %}">Register</a>
+  <a href="{%url 'tools'%}">Tools</a>
+  
+ 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</header>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+{% block main %}
+
+ <img src="{%static 'img/o.jpg'%}" class="bodyimg"/>
+ <h1 class="ho">Hello Home</h1>
+  <p class="title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, esse rem quod repellendus unde fuga velit vero,
+   deleniti incidunt quia aut culpa mollitia repellat eligendi aliquam maiores, architecto aperiam cupiditate.
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, esse rem quod repellendus unde fuga velit vero,
+   deleniti incidunt quia aut culpa mollitia repellat eligendi aliquam maiores, architecto aperiam cupiditate
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, esse rem quod repellendus unde fuga velit vero,
+   deleniti incidunt quia aut culpa mollitia repellat eligendi aliquam maiores, architecto aperiam cupiditate
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, esse rem quod repellendus unde fuga velit vero,
+   deleniti incidunt quia aut culpa mollitia repellat eligendi aliquam maiores, architecto aperiam cupiditate
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, esse rem quod repellendus unde fuga velit vero,
+   deleniti incidunt quia aut culpa mollitia repellat eligendi aliquam maiores, architecto aperiam cupiditate
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, esse rem quod repellendus unde fuga velit vero,
+   deleniti incidunt quia aut culpa mollitia repellat eligendi aliquam maiores, architecto aperiam cupiditate</p>
+   <div class="hero-text">
+    <h1 style="color: rgb(55, 82, 82);">WELCOME TO METRO FARM </h1>
+    <p>Save your's peaceful time</p>
+    <button>LOGIN</button>
+  </div>
+  <!--side-images and -->
+  <div class="side">
+    <img src="{%static 'img/f.jpg'%}" class="img1"/>
+    <img src="{%static 'img/logo.jpg'%}" class="img3"/>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati molestiae commodi voluptates ab omnis quo! Nesciunt et in voluptate error distinctio? Saepe harum exercitationem 
+      iusto beatae veritatis facere sunt fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita quibusdam minus at repellendus optio ea eius tenetur temporibus, rem voluptate esse omnis ratione fuga? 
+      Repudiandae autem odit facere eligendi? Lorem ipsum dolor sit </p><br>
+      <br>
+       <img src="{%static 'img/d.jpg'%}" class="img2"/>
+       <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati molestiae commodi voluptates ab omnis quo! Nesciunt et in voluptate error distinctio? Saepe harum exercitationem 
+        iusto beatae veritatis facere sunt fugiat. Lorem ipsum dolor t </p>
+  </div>
+  <br>
+  <br><br><br>  <br>
+  <br><br><br>
+  <!--demo of tools -->
+  <div>
+    <h1 class="demoproduct">PRODUCTS</h1>  <br>
+    <br><br><br>
+    <div class="card">
+      <img src="{% static 'img/k.jpg' %}" style="width:100%">
+      <div class="pr-container">
+        <h4><b>Spade</b></h4> 
+        <p>Rs.1000</p> 
+      </div>
+    </div>
+  </div>
+
+  <br><br> <br><br>  <br>
+  <br><br><br>
+ <div class="view-bt">
+  <button type="submit" class="login"><a href="{%url 'tools' %}">View all</a></button>
+</div>   <br><br> <br><br>
+
+{% endblock %}
+<!--footer -->
+<footer class="footer">
+  <h1>hello footer</h1>
+  
+</footer>
+</body>
+</html>
